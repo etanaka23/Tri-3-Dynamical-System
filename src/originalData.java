@@ -14,9 +14,7 @@ public class originalData
    private int annualVisitorNum;
    private double annualProfit;
 
-   public originalData(double totalAcres, int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum,
-                       int pythonNum, double waterQuality, int pathwayNum, int facilityNum, int employeeNum, int annualVisitorNum,
-                       double annualProfit){
+   public originalData(double totalAcres, int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum, double waterQuality, int pathwayNum, int facilityNum, int employeeNum, int annualVisitorNum, double annualProfit){
        this.totalAcres = totalAcres;
        this.treeNum = treeNum;
        this.redKangarooNum = redKangarooNum;
