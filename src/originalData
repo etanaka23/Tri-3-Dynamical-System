@@ -1,1 +1,16 @@
+public class originalData {
+   private double totalAcres;
+   private int treeNum;
+   private int redKangarooNum;
+   private int dingoNum;
+   private int moleNum;
+   private int malaNum;
+   private int pythonNum;
+   private double waterQuality;
+   private int pathwayNum;
+   private int facilityNum;
+   private int employeeNum;
+   private int annualVisitorNum;
+   private double annualProfit;
+
 
