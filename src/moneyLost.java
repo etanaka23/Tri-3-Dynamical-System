@@ -1,2 +1,3 @@
-public class moneyLost {
+public class moneyLost
+{
 }
