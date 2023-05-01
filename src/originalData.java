@@ -31,5 +31,8 @@ public class originalData
        this.annualVisitorNum = annualVisitorNum;
        this.annualProfit = annualProfit;
        }
+
+    public originalData() {
     }
+}
 }

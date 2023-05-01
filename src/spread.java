@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class spread
+public class spread extends originalData
 {
     private ArrayList<Integer> neighborhoods;
     private ArrayList<Integer> gridSize;
@@ -20,6 +20,7 @@ public class spread
         firstLitPos = this.firstLitPos;
         treesBurned = this.treesBurned;
     }
+
 
     public void setNeighborhoods (ArrayList<Integer> neighborhoods) {
         this.neighborhoods = neighborhoods;
