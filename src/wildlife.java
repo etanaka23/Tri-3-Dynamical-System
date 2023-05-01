@@ -1,6 +1,6 @@
 public class wildlife
 {
-     private int treeNum;
+    private int treeNum;
     private int redKangarooNum;
     private int dingoNum;
     private int moleNum;
