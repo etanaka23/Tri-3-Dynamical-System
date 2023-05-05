@@ -9,22 +9,22 @@ public class wildlife
 
     public static void wildlife(int treeNum, int kangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum){ }
     public static void setTreeNum (int treeNum){
-        treeNum = 500000;
+        this.treeNum = 500000;
     }
     public static void setRedKangarooNum (int redKangarooNum){
-        redKangarooNum =2500 ;
+        this.redKangarooNum =2500 ;
     }
     public static void setDingoNum (int dingoNum){
-        dingoNum = 500;
+        this.dingoNum = 500;
     }
     public static void setMoleNum (int moleNum){
-        moleNum= 1000;
+        this.moleNum= 1000;
     }
     public static void setMalaNum (int malaNum){
-        malaNum= 1500;
+        this.malaNum= 1500;
     }
     public static void setPythonNum (int pythonNum){
-        pythonNum= 100;
+        this.pythonNum= 100;
     }
     public static int getTreeNum(int treeNum){
         return treeNum;
