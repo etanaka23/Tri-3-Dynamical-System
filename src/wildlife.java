@@ -29,22 +29,22 @@ public class wildlife
     public static int getTreeNum(int treeNum){
         return treeNum;
     }
-    public static int getRedKangarooNum(int re) {
-        return 0;
+    public static int getRedKangarooNum(int redKangarooNum) {
+        return redKangarooNum;
     }
-    public static int getDingoNum (){
-        return 0;
+    public static int getDingoNum (int dingoNum){
+        return dingoNum;
     }
-    public static int getMoleNum (){
-        return 0;
+    public static int getMoleNum (int moleNum){
+        return moleNum;
     }
-    public static int getMalaNum (){
-        return 0;
+    public static int getMalaNum (int malaNum){
+        return malaNum;
     }
-    public static int getPythonNum (){
-        return 0;
+    public static int getPythonNum (int pythonNum){
+        return pythonNum;
     }
-    public static String printWildlife (){
-        return "wildlife";
+    public static void printWildlife (int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum){
+        System.out.print(" Pre- fire data: Wilflife \n Number of Trees: " + treeNum + "\n Number of Red Kangaroos: " + redKangarooNum +  " \n Number of Dingos: " + dingoNum + " \n Number of Moles: " + moleNum + "  \n Number of Mala: " + malaNum +  " \n Number of Pythons: " + pythonNum ;
     }
 }
