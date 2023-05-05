@@ -48,24 +48,27 @@ public class originalData
         pythonNum= 100;
     }
     public static void setWaterQuality (double waterQuality){
-       
+       waterQuality = 7.4;
+       // this is the pH 
    }
     public static void setPathwaysNum (int pathwayNum){
-       
+       pathwayNum = 100;
+       // this is the miles of pathways 
    }
     public static void setFacilitiesNum (int facilitiesNum){
-       
+       facilitiesNum = 10;
+       //number of buildings in the park 
    }
     public static void setEmployeeNum (int employeeNum) {
+       employeeNum = 750;
        
    }
-    public static void setAnnualVisitorsNum (int annaulVisitorsNum){
+    public static void setAnnualVisitorsNum (int annualVisitorsNum){
+       annualVistorsNum = 250,000; 
        
    }
-    public static void setAnnualProfitNum (double annaulProfitNUm){
-       
-   }
-    public static void setOriginalData () {
+    public static void setAnnualProfitNum (double annaulProfitNum){
+       annualProfitNum= 320,000,000
        
    }
 
@@ -87,21 +90,24 @@ public class originalData
     public static int getPythonNum (int pythonNum){
         return pythonNum;
     }
-    public static int getWaterQuality (){
+    public static int getWaterQuality (double waterQuality){
+       return waterQuality;
    }
-    public static int getPathwaysNum (){
+    public static int getPathwaysNum (int pathwayNum){
+       return pathwayNum;
    }
-    public static int getFacilitiesNum (){
+    public static int getFacilitiesNum (int facilitiesNum){
+       return facilitiesNum;
    }
-    public static int getEmployeeNum (){
+    public static int getEmployeeNum (int employeeNum){
+       return employeeNum;
    } 
-    public static int getAnnualVisitorsNum (){
+    public static int getAnnualVisitorsNum (int annualVisitorsNum){
+       return annualVistorsNum;
    }
-    public static int getAnnualProfitNum (){
-   }
-    public static String getOriginalData (){
-   } 
-
+    public static int getAnnualProfitNum (double annualProfitNum){
+       return annualProfitNum;
+    }
     public static void printWildlife (int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum){
         System.out.print(" Pre- fire data: Wilflife \n Number of Trees: " + treeNum + "\n Number of Red Kangaroos: " + redKangarooNum +  " \n Number of Dingos: " + dingoNum + " \n Number of Moles: " + moleNum + "  \n Number of Mala: " + malaNum +  " \n Number of Pythons: " + pythonNum ;
     }
