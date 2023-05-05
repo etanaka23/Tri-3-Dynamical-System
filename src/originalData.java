@@ -28,9 +28,5 @@ public class originalData
        this.employeeNum = employeeNum;
        this.annualVisitorNum = annualVisitorNum;
        this.annualProfit = annualProfit;
-       }
-
-    public originalData() {
-    }
-}
+   }
 }
