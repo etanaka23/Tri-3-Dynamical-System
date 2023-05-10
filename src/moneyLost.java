@@ -34,7 +34,7 @@ public class moneyLost
     relocateWildlife = 4000;
   }
   public void setRescuWildlife (int rescueWildlife){
-    rescueWilddlife = 4000;
+    rescueWildlife = 4000;
   }
   public void setAnanguPeople (int ananguPeople){
     ananguPeople= 12500000;
@@ -48,8 +48,8 @@ public class moneyLost
   public int getCleanAshes (int cleanAshes){
     return cleanAshes;
   }
-  public int getWaterQuality (int waterQuality){
-    return waterQuaity;
+  public double getWaterQuality (double waterQuality){
+    return waterQuality;
   } 
   public int getRebuildFacilities (int rebuildFacilities){
     return rebuildFacilities;
@@ -68,7 +68,7 @@ public class moneyLost
   } 
   public int getMoneyLost (int replantTrees, int cleanAshes, int waterQuality, int rebuildFacilities, int relocateWildlife, int rescueWildlife, int ananguPeople, int employeeNum){
     int moneyLost = replantTrees+cleanAshes+waterQuality+rebuildFacilities+relocateWildlife+rescueWildlife+ananguPeople+employeeNum;
-    System.out.print.ln("Total Money Lost: " + moneyLost);
+    System.out.println("Total Money Lost: " + moneyLost);
     return moneyLost;
   } 
 
