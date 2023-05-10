@@ -20,78 +20,78 @@ public class postFireData extends spread
         super(neighborhoods, gridSize, treeDensity, growProb, strikeProb, firstLitPos, treesBurned);
        
    }
-    public static void setTreeNum (int treeNum){
+    public void setTreeNum (int treeNum){
     treeNum =
     }
-    public static void setRedKangarooNum (int redKangarooNum){
+    public void setRedKangarooNum (int redKangarooNum){
     reKangaroo =
     }
-    public static void setDingoNum (int dingoNum){
+    public void setDingoNum (int dingoNum){
     dingoNum =
     }
-    public static void setMoleNum (int moleNum){
+    public void setMoleNum (int moleNum){
     moleNum =
     }
-    public static void setMalaNum (int malaNum){
+    public void setMalaNum (int malaNum){
     malaNum=
     }
-    public static void setPythonNum (int pythonNum){
+    public void setPythonNum (int pythonNum){
     phythonNum=
     } 
-    public static void setWaterQuality (int waterQuality){
+    public void setWaterQuality (int waterQuality){
     waterQuality =
     }
-    public static void setPathwaysNum (int pathwaysNum){
+    public void setPathwaysNum (int pathwaysNum){
     pathwaysNum =
     }
-    public static void etFacilitiesNum (int facilitiesNum){
+    public void etFacilitiesNum (int facilitiesNum){
     failitesNum=
     }
-    public static void setEmployeeNum (int employeeNum){
+    public void setEmployeeNum (int employeeNum){
     employeeNum=
     
     } 
-    public static void setAnnualVisitorsNum (int annualVisitorsNum){
+    public void setAnnualVisitorsNum (int annualVisitorsNum){
     annualVistorsNum=
     } 
-    public static void setAnnualProfitNum (int annualProfitNum){
+    public void setAnnualProfitNum (int annualProfitNum){
     annualProfitNum =
     }
     
-    public static int getTreeNum (int treeNum){
+    public int getTreeNum (int treeNum){
     return treeNum;
     }
-    public static int getRedKangarooNum (int redKangaooNum){
+    public int getRedKangarooNum (int redKangaooNum){
     return redKangarooNum;
     }
-    public static int getDingoNum (int dingoNum){
+    public int getDingoNum (int dingoNum){
     return dingoNum;
     }
-    public static int getMoleNum (int moleNum){
+    public int getMoleNum (int moleNum){
     return moleNum;
     }
-    public static int getMalaNum (int malaNum){
+    public int getMalaNum (int malaNum){
     return malaNum;
     }
-    public static int  getPythonNum (int pythonNum){
-    return phythonNum;
+    public int  getPythonNum (int pythonNum){
+    return pythonNum;
     }
-    public static int getWaterQuality (int waterQuality){
+    public int getWaterQuality (int waterQuality){
     return waterQuality;
     } 
-    public static int getPathwaysNum (int pathwaysNum){
+    public int getPathwaysNum (int pathwaysNum){
     return pathwaysNum;
     }
-    public static int getFacilitiesNum (int facilitesNum){
+    public int getFacilitiesNum (int facilitesNum){
     return facilitesNum;
     }
-    public static int getEmployeeNum (int employeeNum){
+    public int getEmployeeNum (int employeeNum){
     return employeeNum;
     } 
-    public static int getAnnualVisitorsNum (int annualVistorsNum){
+    public int getAnnualVisitorsNum (int annualVistorsNum){
     return annualVistorsNum;
     }
-    public static int getAnnualProfitNum (int annualProfitNum){
+    public int getAnnualProfitNum (int annualProfitNum){
     return annualProfitNum;
     }
     
