@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Spread extends originalData
+public class spread extends originalData
 {
     private String[][] grid;
     private double treeDensity = 0.5;
@@ -8,7 +8,7 @@ public class Spread extends originalData
     private double strikeProb = 0.2;
     private static int count = 0;
 
-    public Spread(){
+    public spread(){
         int side = (int)Math.sqrt(super.getTotalArea());
         grid = new String[side][side];
         
