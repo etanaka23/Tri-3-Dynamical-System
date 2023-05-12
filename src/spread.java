@@ -6,6 +6,7 @@ public class Spread extends originalData
     private double treeDensity = 0.5;
     private double growProb = 0.4;
     private double strikeProb = 0.2;
+    private static int count = 0;
 
     public Spread(){
         for(int i=0; i<grid.length; i++){
@@ -54,6 +55,7 @@ public class Spread extends originalData
         for(int j=0; j<grid[0].length; j++){
             if(grid[0][j].equals("F")){
                 after[0][j] = "_";
+                count++;
                 if(j==0){
                     if(grid[0][j+1].equals("T")){
                         after[0][j+1] = "F";
@@ -86,6 +88,7 @@ public class Spread extends originalData
             for(int j=0; j<grid[0].length; j++){
                 if(grid[i][j].equals("F")) {
                     after[i][j] = "_";
+                    count++;
                     if(j==0){
                         if(grid[i][j+1].equals("T")){
                             after[i][j+1] = "F";
@@ -128,6 +131,7 @@ public class Spread extends originalData
         for(int j=0; j<grid[0].length; j++){
             if(grid[x][j].equals("F")){
                 after[x][j] = "_";
+                count++;
                 if(j==0){
                     if(grid[x][j+1].equals("T")){
                         after[x][j+1] = "F";
