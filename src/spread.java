@@ -1,105 +1,180 @@
 import java.util.ArrayList;
 
-public class spread extends originalData
+public class Spread extends originalData
 {
-    private ArrayList<Integer> neighborhoods;
-    private ArrayList<Integer> gridSize;
-    private double treeDensity;
-    private double growProb;
-    private double strikeProb;
-    private ArrayList<Integer> firstLitPos;
-    private int treesBurned;
+    private String[][] grid = new String[10][10];
+    private double treeDensity = 0.5;
+    private double growProb = 0.4;
+    private double strikeProb = 0.2;
 
-    public spread (ArrayList<Integer> neighborhoods, ArrayList<Integer> gridSize, double treeDensity, double growProb, double strikeProb, ArrayList<Integer> firstLitPos, int treesBurned)
-    {
-        neighborhoods = this.neighborhoods;
-        gridSize = this.gridSize;
-        treeDensity = this.treeDensity;
-        growProb = this.growProb;
-        strikeProb = this.strikeProb;
-        firstLitPos = this.firstLitPos;
-        treesBurned = this.treesBurned;
+    public Spread(){
+        for(int i=0; i<grid.length; i++){
+            for(int j=0; j<grid[0].length; j++){
+                int num = (int)(Math.random()*10)+1;
+                if(num>treeDensity*10){
+                    grid[i][j] = "_";
+                }
+                else{
+                    grid[i][j] = "T";
+                }
+            }
+        }
+    }
+
+    public void displayGrid(){
+        for(int i=0; i<grid.length; i++){
+            for(int j=0; j<grid[0].length; j++){
+                System.out.print(grid[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    public void strike(){
+        int num = (int)(Math.random()*10)+1;
+        if(num<=strikeProb*10){
+            int x = (int)(Math.random()*grid.length);
+            int y = (int)(Math.random()*grid[0].length);
+            grid[x][y] = "F";
+            System.out.println("\nSet position "+x+", "+y+" on fire: ");
+            displayGrid();
+        }
     }
 
 
-    public void setNeighborhoods (ArrayList<Integer> neighborhoods) {
-        this.neighborhoods = neighborhoods;
+    public void setStrike(int x, int y){
+        grid[x][y] = "F";
+        System.out.println("\nafter strike: ");
+        displayGrid();
     }
 
-    public void setGridSize(ArrayList<Integer> gridSize) {
-        this.gridSize = gridSize;
-    }
+    public void spreadFire(){
+        String[][] after = new String[grid.length][grid[0].length];
 
-    public void setTreeDensity(double treeDensity) {
-        this.treeDensity = treeDensity;
-    }
+        for(int j=0; j<grid[0].length; j++){
+            if(grid[0][j].equals("F")){
+                after[0][j] = "_";
+                if(j==0){
+                    if(grid[0][j+1].equals("T")){
+                        after[0][j+1] = "F";
+                    }
+                    if(grid[1][j].equals("T")){
+                        after[1][j] = "F";
+                    }
+                } else if(j==grid[0].length-1){
+                    if(grid[0][j-1].equals("T")){
+                        after[0][j-1] = "F";
+                    }
+                    if(grid[1][j].equals("T")){
+                        after[1][j] = "F";
+                    }
+                } else{
+                    if(grid[0][j-1].equals("T")){
+                        after[0][j-1] = "F";
+                    }
+                    if(grid[0][j+1].equals("T")){
+                        after[0][j+1] = "F";
+                    }
+                    if(grid[1][j].equals("T")){
+                        after[1][j] = "F";
+                    }
+                }
+            }
+        }
 
-    public void setGrowProb(double growProb) {
-        this.growProb = growProb;
-    }
+        for(int i=1; i<grid.length-1; i++){
+            for(int j=0; j<grid[0].length; j++){
+                if(grid[i][j].equals("F")) {
+                    after[i][j] = "_";
+                    if(j==0){
+                        if(grid[i][j+1].equals("T")){
+                            after[i][j+1] = "F";
+                        }
+                        if(grid[i-1][j].equals("T")){
+                            after[i-1][j] = "F";
+                        }
+                        if(grid[i+1][j].equals("T")){
+                            after[i+1][j] = "F";
+                        }
+                    } else if(j==grid[0].length-1){
+                        if(grid[i][j-1].equals("T")){
+                            after[i][j-1] = "F";
+                        }
+                        if(grid[i-1][j].equals("T")){
+                            after[i-1][j] = "F";
+                        }
+                        if(grid[i+1][j].equals("T")){
+                            after[i+1][j] = "F";
+                        }
+                    } else{
+                        if(grid[i][j-1].equals("T")){
+                            after[i][j-1] = "F";
+                        }
+                        if(grid[i][j+1].equals("T")){
+                            after[i][j+1] = "F";
+                        }
+                        if(grid[i-1][j].equals("T")){
+                            after[i-1][j] = "F";
+                        }
+                        if(grid[i+1][j].equals("T")){
+                            after[i+1][j] = "F";
+                        }
+                    }
+                }
+            }
+        }
 
-    public void setStrikeProb(double strikeProb) {
-        this.strikeProb = strikeProb;
-    }
+        int x = grid[0].length-1;
+        for(int j=0; j<grid[0].length; j++){
+            if(grid[x][j].equals("F")){
+                after[x][j] = "_";
+                if(j==0){
+                    if(grid[x][j+1].equals("T")){
+                        after[x][j+1] = "F";
+                    }
+                    if(grid[x-1][j].equals("T")){
+                        after[x-1][j] = "F";
+                    }
+                } else if(j==grid[0].length-1){
+                    if(grid[x][j-1].equals("T")){
+                        after[x][j-1] = "F";
+                    }
+                    if(grid[x-1][j].equals("T")){
+                        after[x-1][j] = "F";
+                    }
+                } else{
+                    if(grid[x][j-1].equals("T")){
+                        after[x][j-1] = "F";
+                    }
+                    if(grid[x][j+1].equals("T")){
+                        after[x][j+1] = "F";
+                    }
+                    if(grid[x-1][j].equals("T")){
+                        after[x-1][j] = "F";
+                    }
+                }
+            }
+        }
 
-    public void setFirstLitPos(ArrayList<Integer> firstLitPos) {
-        this.firstLitPos = firstLitPos;
-    }
+        for(int i=0; i<grid.length; i++) {
+            for (int j=0; j<grid[0].length; j++) {
+                if(after[i][j]==null){
+                    after[i][j]=grid[i][j];
+                }
+            }
+        }
 
-    public void setTreesBurned(int treesBurned) {
-        this.treesBurned = treesBurned;
-    }
-
-    public ArrayList<Integer> getNeighborhoods() {
-        return neighborhoods;
-    }
-
-    public ArrayList<Integer> getGridSize() {
-        return gridSize;
-    }
-
-    public double getTreeDensity() {
-        return treeDensity;
-    }
-
-    public double getGrowProb() {
-        return growProb;
-    }
-
-    public double getStrikeProb() {
-        return strikeProb;
-    }
-
-    public ArrayList<Integer> getFirstLitPos() {
-        return firstLitPos;
-    }
-
-    public int getTreesBurned() {
-        return treesBurned;
-    }
-
-    public ArrayList<Integer> initialGrid (ArrayList<Integer> girdSize, double treeDensity)
-    {
-        return initialGrid(getGridSize(), getTreeDensity());
-    }
-
-    public ArrayList<Integer> simulateSpread (ArrayList<Integer> firstLitPos, ArrayList<Integer> neighborhoods, double growProb, double strikeProb)
-    {
-        return simulateSpread(getFirstLitPos(), getNeighborhoods(), getGrowProb(), getStrikeProb());
-    }
-
-    public String printSpread ()
-    {
-        String print = "Neighborhoods: " + getNeighborhoods() + "."
-                + "Grid Size: " + getGridSize() + "."
-                + "Tree Density: " + getTreeDensity() + "."
-                + "Grow Probability: " + getGrowProb() + "."
-                + "Strike Probability: " + getStrikeProb() + "."
-                + "First Lit Pos: " + getFirstLitPos() + "."
-                + "Number of Trees Burned: " + getTreesBurned() + "."
-                + "Initial Grid: " + initialGrid(getGridSize(), getTreeDensity()) + "."
-                + "Similation of the Spread: " + simulateSpread(getFirstLitPos(), getNeighborhoods(), getGrowProb(), getStrikeProb());
-
-        return print;
+        for(int i=0; i<grid.length; i++){
+            for(int j=0; j<grid[0].length; j++){
+                if(grid[i][j].equals("_")){
+                    int num = (int)(Math.random()*10)+1;
+                    if(num<=growProb*10){
+                        after[i][j] = "T";
+                    }
+                }
+            }
+        }
+        grid = after;
+        displayGrid();
     }
 }
