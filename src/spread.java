@@ -2,13 +2,16 @@ import java.util.ArrayList;
 
 public class Spread extends originalData
 {
-    private String[][] grid = new String[10][10];
+    private String[][] grid;
     private double treeDensity = 0.5;
     private double growProb = 0.4;
     private double strikeProb = 0.2;
     private static int count = 0;
 
     public Spread(){
+        int side = (int)Math.sqrt(super.getTotalArea());
+        grid = new String[side][side];
+        
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
                 int num = (int)(Math.random()*10)+1;
