@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class postFireData extends spread
+public class postFireData
 {
     private double totalAcres;
     private int treeNum;
@@ -16,12 +16,26 @@ public class postFireData extends spread
     private int annualVisitorsNum;
     private double annualProfitNum;
 
-    public postFireData(ArrayList<Integer> neighborhoods, ArrayList<Integer> gridSize, double treeDensity, double growProb, double strikeProb, ArrayList<Integer> firstLitPos, int treesBurned) {
-        super(neighborhoods, gridSize, treeDensity, growProb, strikeProb, firstLitPos, treesBurned);
-       
-   }
-    public void setTreeNum (int treeNum){
-    treeNum =
+    public postFireData(double totalAcres, int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum, double waterQuality, int pathwaysNum,
+                        int facilitiesNum, int employeeNum, int annualVisitorsNum, double annualProfitNum)
+    {
+       this.totalAcres = totalAcres;
+       this.treeNum = treeNum;
+       this.redKangarooNum = redKangarooNum;
+       this.dingoNum = dingoNum;
+       this.moleNum = moleNum;
+       this.malaNum = malaNum;
+       this.pythonNum = pythonNum;
+       this.waterQuality = waterQuality;
+       this.pathwaysNum = pathwaysNum;
+       this.facilitiesNum = facilitiesNum;
+       this.employeeNum = employeeNum;
+       this.annualVisitorsNum = annualVisitorsNum;
+       this.annualProfitNum = annualProfitNum;
+    }
+    public void setTreeNum (int treeNum)
+    {
+     treeNum =
     }
     public void setRedKangarooNum (int redKangarooNum){
     reKangaroo =
@@ -61,7 +75,7 @@ public class postFireData extends spread
     public int getTreeNum (int treeNum){
     return treeNum;
     }
-    public int getRedKangarooNum (int redKangaooNum){
+    public int getRedKangarooNum (int redKangarooNum){
     return redKangarooNum;
     }
     public int getDingoNum (int dingoNum){
