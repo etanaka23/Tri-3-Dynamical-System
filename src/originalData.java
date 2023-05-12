@@ -1,18 +1,18 @@
 public class originalData
 {
-   private double totalAcres;
-   private int treeNum;
-   private int redKangarooNum;
-   private int dingoNum;
-   private int moleNum;
-   private int malaNum;
-   private int pythonNum;
-   private double waterQuality;
-   private int pathwayNum;
-   private int facilityNum;
-   private int employeeNum;
-   private int annualVisitorNum;
-   private double annualProfit;
+   private double totalAcres = 512.0;
+   private int treeNum = 500000;
+   private int redKangarooNum = 2500;
+   private int dingoNum = 500;
+   private int moleNum = 1000;
+   private int malaNum = 1500;
+   private int pythonNum = 100;
+   private double waterQuality = 7.4;
+   private int pathwayNum = 100;
+   private int facilityNum = 10;
+   private int employeeNum = 750;
+   private int annualVisitorNum = 250000;
+   private double annualProfit = 320000000;
 
    public originalData(double totalAcres, int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum, double waterQuality, int pathwayNum, int facilityNum, int employeeNum, int annualVisitorNum, double annualProfit){
        this.totalAcres = totalAcres;
@@ -29,84 +29,84 @@ public class originalData
        this.annualVisitorNum = annualVisitorNum;
        this.annualProfit = annualProfit;
    }
-    public void setTreeNum (int treeNum){
-        treeNum = 500000;
+    public void setTreeNum (int tree){
+        treeNum = tree;
     }
-    public void setRedKangarooNum (int redKangarooNum){
-        redKangarooNum =2500 ;
+    public void setRedKangarooNum (int redKangaroo){
+        redKangarooNum = redKangaroo;
     }
-    public void setDingoNum (int dingoNum){
-        dingoNum = 500;
+    public void setDingoNum (int dingo){
+        dingoNum = dingo;
     }
-    public void setMoleNum (int moleNum){
-        moleNum= 1000;
+    public void setMoleNum (int mole){
+        moleNum = mole;
     }
-    public void setMalaNum (int malaNum){
-        malaNum= 1500;
+    public void setMalaNum (int mala){
+        malaNum = mala;
     }
-    public void setPythonNum (int pythonNum){
-        pythonNum= 100;
+    public void setPythonNum (int python){
+        pythonNum = python;
     }
-    public void setWaterQuality (double waterQuality){
-       waterQuality = 7.4;
+    public void setWaterQuality (double waterQ){
+       waterQuality = waterQ;
        // this is the pH 
    }
-    public void setPathwaysNum (int pathwayNum){
-       pathwayNum = 100;
+    public void setPathwayNum (int pathway){
+       pathwayNum = pathway;
        // this is the miles of pathways 
    }
-    public void setFacilitiesNum (int facilitiesNum){
-       facilitiesNum = 10;
+    public void setFacilityNum (int facility){
+       facilityNum = facility;
        //number of buildings in the park 
    }
-    public void setEmployeeNum (int employeeNum) {
-       employeeNum = 750;
+    public void setEmployeeNum (int employee) {
+       employeeNum = employee;
        
    }
-    public void setAnnualVisitorsNum (int annualVisitorsNum){
-       annualVisitorsNum = 250000;
+    public void setAnnualVisitorNum (int annualVisitor){
+       annualVisitorNum = annualVisitor;
    }
-    public void setAnnualProfitNum (double annaulProfitNum){
-       annaulProfitNum = 320000000;
+    public void setAnnualProfitNum (double annualProfit){
+       annaulProfitNum = annualProfit;
    }
 
-    public int getTreeNum(int treeNum){
+    public int getTreeNum(){
         return treeNum;
     }
-    public int getRedKangarooNum(int redKangarooNum) {
+    public int getRedKangarooNum() {
         return redKangarooNum;
     }
-    public int getDingoNum (int dingoNum){
+    public int getDingoNum (){
         return dingoNum;
     }
-    public int getMoleNum (int moleNum){
+    public int getMoleNum (){
         return moleNum;
     }
-    public int getMalaNum (int malaNum){
+    public int getMalaNum (){
         return malaNum;
     }
-    public int getPythonNum (int pythonNum){
+    public int getPythonNum (){
         return pythonNum;
     }
-    public double getWaterQuality (double waterQuality){
+    public double getWaterQuality (){
        return waterQuality;
    }
-    public int getPathwaysNum (int pathwayNum){
+    public int getPathwaysNum (){
        return pathwayNum;
    }
-    public int getFacilitiesNum (int facilitiesNum){
-       return facilitiesNum;
+    public int getFacilitiesNum (){
+       return facilityNum;
    }
-    public int getEmployeeNum (int employeeNum){
+    public int getEmployeeNum (){
        return employeeNum;
    } 
-    public int getAnnualVisitorsNum (int annualVisitorsNum){
-       return annualVisitorsNum;
+    public int getAnnualVisitorNum (){
+       return annualVisitorNum;
    }
-    public double getAnnualProfitNum (double annualProfitNum){
+    public double getAnnualProfitNum (){
        return annualProfitNum;
     }
-    public void printWildlife (int treeNum, int redKangarooNum, int dingoNum, int moleNum, int malaNum, int pythonNum){
-        System.out.print(" Pre- fire data: Wilflife \n Number of Trees: " + treeNum + "\n Number of Red Kangaroos: " + redKangarooNum +  " \n Number of Dingos: " + dingoNum + " \n Number of Moles: " + moleNum + "  \n Number of Mala: " + malaNum +  " \n Number of Pythons: " + pythonNum);
+    public String  printWildlife (){
+        return "Pre- fire data: Wilflife \nNumber of Trees: " + treeNum + "\nNumber of Red Kangaroos: " + redKangarooNum +  " \nNumber of Dingos: " + dingoNum + " \nNumber of Moles: " + moleNum + "  \nNumber of Mala: " + malaNum +  " \nNumber of Pythons: " + pythonNum;
     }
 }
