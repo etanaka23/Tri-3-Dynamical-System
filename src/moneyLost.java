@@ -29,7 +29,7 @@ public class moneyLost
    /**
   *
   *sets the amount of money to clean ashes
-  *@return
+  *@param cleanAshes
   */
   public void setCleanAshes (int cleanAshes){
     cleanAshes = 400;
@@ -37,7 +37,7 @@ public class moneyLost
    /**
   *
   * sets the amount of money to fix water quality
-  *@return
+  *@param waterQuality
   */
   public void setWaterQuality (int waterQuality){
     waterQuality = 3000;
@@ -45,7 +45,7 @@ public class moneyLost
    /**
   *
   * sets the amount of money to rebuild facilites
-  *@return
+  *@param rebuildFacilites
   */
   public void setRebuildFacilities (int rebuildFacilities){
     rebuildFacilities = 375000;
@@ -53,7 +53,7 @@ public class moneyLost
    /**
   *
   * sets the amount of money to reclocate wildlife
-  *@return
+  *@param reclocateWildlife
   */
   public void setRelocateWildlife (int relocateWildlife){
     relocateWildlife = 4000;
@@ -61,7 +61,7 @@ public class moneyLost
    /**
   *
   * sets the amount of money to rescue wildlife
-  *@return
+  *@param rescueWildlife
   */
   public void setRescuWildlife (int rescueWildlife){
     rescueWildlife = 4000;
@@ -69,7 +69,7 @@ public class moneyLost
    /**
   *
   *sets the amount of money to give to the anagu people
-  *@return
+  *@param ananguPeople
   */
   public void setAnanguPeople (int ananguPeople){
     ananguPeople= 12500000;
@@ -77,7 +77,7 @@ public class moneyLost
    /**
   *
   * sets the amount of money to pay the employyes
-  *@return
+  *@param employeeNum
   */
   public void setEmployeeNum (int employeeNum ){
     employeeNum = 60000;
@@ -85,7 +85,8 @@ public class moneyLost
    /**
   *
   * gets the amount of money to replay trees
-  *@return
+  *@param replantTrees
+  *@return 
   */
   public int getReplantTrees (int replantTrees){
     return replantTrees;
@@ -93,7 +94,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money to clean the ashes
-  *@return
+  *@param cleanAshes
   */
   public int getCleanAshes (int cleanAshes){
     return cleanAshes;
@@ -101,6 +102,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money to fix the water quality 
+  * @param waterQuality
   *@return
   */
   public double getWaterQuality (double waterQuality){
@@ -109,6 +111,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money to rebuild the burnt facillities
+  *@param rebuildFacilites
   *@return
   */
   public int getRebuildFacilities (int rebuildFacilities){
@@ -117,6 +120,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money to relocate wildlife
+  *@param relocateWildlife
   *@return
   */
   public int getRelocateWildlife (int relocateWildlife){
@@ -125,6 +129,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money to rescue the wildlife 
+  *@param rescueWildlife
   *@return
   */
   public int getRescuWildlife (int rescueWildlife){
@@ -133,6 +138,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money the park needs to give the anangu people
+  *@param ananguPeople
   *@return
   */
   public int getAnanguPeople (int ananguPeople){
@@ -141,6 +147,7 @@ public class moneyLost
    /**
   *
   * gets the amount of money you need to pay employeees
+  *@param employeeNum
   *@return
   */
   public int getEmployeeNum (int employeeNum ){
