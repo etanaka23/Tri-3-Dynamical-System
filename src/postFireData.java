@@ -37,7 +37,7 @@ public class postFireData extends originalData
     *
     * sets total acres
     *@param postTotalAcres
-    *@return
+    *
     */
     public void setPostTotalAcres(double postTotalAcres) {
         this.postTotalAcres = postTotalAcres;
@@ -45,7 +45,7 @@ public class postFireData extends originalData
      /**
     * sets the number of trees
     * @param postTreeNum
-    *@return
+    *
     */
 
     public void setPostTreeNum(int postTreeNum) {
@@ -54,7 +54,7 @@ public class postFireData extends originalData
      /**
     * sets the number of red kangaroos 
     * @param postRedKangarooNum
-    *@return
+    *
     */
 
     public void setPostRedKangarooNum(int postRedKangarooNum) {
@@ -63,7 +63,7 @@ public class postFireData extends originalData
      /**
     * sets the number of dingos
     * @param post DingoNum
-    *@return
+    *
     */
 
     public void setPostDingoNum(int postDingoNum) {
@@ -72,7 +72,7 @@ public class postFireData extends originalData
      /**
     * sets the number of moles
     * @param postMoleNum
-    *@return
+    *
     */
 
     public void setPostMoleNum(int postMoleNum) {
@@ -81,7 +81,7 @@ public class postFireData extends originalData
      /**
     * sets the number of Malas
     * @ param postMalaNum
-    *@return
+    *
     */
 
     public void setPostMalaNum(int postMalaNum) {
@@ -90,7 +90,7 @@ public class postFireData extends originalData
      /**
     * sets the number of Pythons
     * @param postPythonNum
-    *@return
+    *
     */
 
     public void setPostPythonNum(int postPythonNum) {
@@ -99,7 +99,7 @@ public class postFireData extends originalData
      /**
     * sets the number of pathways
     * @param postPathwayNum
-    *@return
+    *
     */
 
     public void setPostPathwayNum(int postPathwayNum) {
@@ -108,7 +108,7 @@ public class postFireData extends originalData
      /**
     * sets the water quality
     * @param postWaterQuality
-    *@return
+    *
     */
 
     public void setPostWaterQuality(double postWaterQuality) {
@@ -117,7 +117,7 @@ public class postFireData extends originalData
      /**
     *sets the number of employees
     * @param postEmployeeNum
-    *@return
+    *
     */
 
     public void setPostEmployeeNum(int postEmployeeNum) {
@@ -126,7 +126,7 @@ public class postFireData extends originalData
      /**
     * sets the number of facilities there are 
     * @param postFacilityNum
-    *@return
+    *
     */
 
     public void setPostFacilityNum(int postFacilityNum) {
@@ -135,7 +135,7 @@ public class postFireData extends originalData
      /**
     * sets the number of annual vistors
     * @param postAnnualVisitorNum
-    *@return
+    *
     */
 
     public void setPostAnnualVisitorNum(int postAnnualVisitorNum) {
@@ -144,7 +144,7 @@ public class postFireData extends originalData
      /**
     * set the annual profit 
     * @param postAnnualProfit
-    *@return
+    *
     */
 
     public void setPostAnnualProfit(double postAnnualProfit) {
