@@ -1,4 +1,6 @@
-public class originalData
+import java.awt.*;
+
+public class originalData extends Canvas
 {
    private double totalAcres = 512.0;
    private int treeNum = 500000;
