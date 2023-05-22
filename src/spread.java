@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Spread extends originalData{
+public class spread extends originalData{
     private int side;
     private String[][] grid;
     private double treeDensity = 0.5;
