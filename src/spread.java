@@ -1,16 +1,14 @@
 import java.awt.*;
 
 public class spread extends originalData{
-    private int side;
-    private String[][] grid;
+    private int side = (int)Math.sqrt(super.getTotalArea());
+    private String[][] grid = new String[side][side];
     private double treeDensity = 0.5;
     private double growProb = 0.2;
     private double strikeProb = 0.2;
     private static int burntNum = 0;
 
-    public Spread(){
-        side = (int)Math.sqrt(super.getTotalArea());
-        grid = new String[side][side];
+    public spread(){
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
                 int num = (int)(Math.random()*10)+1;
@@ -23,6 +21,18 @@ public class spread extends originalData{
             }
         }
     }
+
+    public void setTreeDensity(double density){ treeDensity = density; }
+
+    public void setGrowProb(double grow){ growProb = grow; }
+
+    public void setStrikeProb(double strike){ strikeProb = strike; }
+
+    public double getTreeDensity(){ return treeDensity; }
+
+    public double getGrowProb(){ return growProb; }
+
+    public double getStrikeProb(){ return strikeProb; }
 
     public String[][] getGrid(){
         return grid;
