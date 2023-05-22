@@ -34,9 +34,7 @@ public class spread extends originalData{
 
     public double getStrikeProb(){ return strikeProb; }
 
-    public String[][] getGrid(){
-        return grid;
-    }
+    public String[][] getGrid(){ return grid; }
 
     public void displayGrid(){
         for(int i=0; i<grid.length; i++){
