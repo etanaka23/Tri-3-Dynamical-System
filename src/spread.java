@@ -1,17 +1,16 @@
-import java.util.ArrayList;
+import java.awt.*;
 
-public class spread extends originalData
-{
+public class Spread extends originalData{
+    private int side;
     private String[][] grid;
     private double treeDensity = 0.5;
-    private double growProb = 0.4;
+    private double growProb = 0.2;
     private double strikeProb = 0.2;
-    private static int count = 0;
+    private static int burntNum = 0;
 
-    public spread(){
-        int side = (int)Math.sqrt(super.getTotalArea());
+    public Spread(){
+        side = (int)Math.sqrt(super.getTotalArea());
         grid = new String[side][side];
-        
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
                 int num = (int)(Math.random()*10)+1;
@@ -23,6 +22,10 @@ public class spread extends originalData
                 }
             }
         }
+    }
+
+    public String[][] getGrid(){
+        return grid;
     }
 
     public void displayGrid(){
@@ -53,12 +56,13 @@ public class spread extends originalData
     }
 
     public void spreadFire(){
+
         String[][] after = new String[grid.length][grid[0].length];
 
         for(int j=0; j<grid[0].length; j++){
             if(grid[0][j].equals("F")){
                 after[0][j] = "_";
-                count++;
+                burntNum++;
                 if(j==0){
                     if(grid[0][j+1].equals("T")){
                         after[0][j+1] = "F";
@@ -91,7 +95,7 @@ public class spread extends originalData
             for(int j=0; j<grid[0].length; j++){
                 if(grid[i][j].equals("F")) {
                     after[i][j] = "_";
-                    count++;
+                    burntNum++;
                     if(j==0){
                         if(grid[i][j+1].equals("T")){
                             after[i][j+1] = "F";
@@ -134,7 +138,7 @@ public class spread extends originalData
         for(int j=0; j<grid[0].length; j++){
             if(grid[x][j].equals("F")){
                 after[x][j] = "_";
-                count++;
+                burntNum++;
                 if(j==0){
                     if(grid[x][j+1].equals("T")){
                         after[x][j+1] = "F";
@@ -182,6 +186,40 @@ public class spread extends originalData
             }
         }
         grid = after;
+        System.out.println();
         displayGrid();
     }
+
+    public int getBurntNum(){
+        return burntNum;
+    }
+
+
+    public void paint(Graphics g){
+        g.drawRect(50, 50, side*10,side*10);
+        int x = 10;
+        int y = 10;
+        for(int i=0; i<side; i++){
+            g.drawLine(50, x+50, side*10+50, x+50);
+            x+=10;
+        }
+        for(int i=0; i<side; i++){
+            g.drawLine(y+50, 50, y+50, side*10+50);
+            y+=10;
+        }
+
+        for(int i=0; i< grid.length; i++){
+            for(int j=0; j<grid.length; j++){
+                if(grid[i][j].equals("T")){
+                    g.setColor(Color.GREEN);
+                    g.fillRect(50+i*10, 50+j*10, 10, 10);
+                }
+                else if(grid[i][j].equals("F")){
+                    g.setColor(Color.red);
+                    g.fillRect(50+i*10, 50+j*10, 10, 10);
+                }
+            }
+        }
+    }
 }
+
