@@ -1,13 +1,13 @@
 public class moneyLost
 {
   private int replantTrees;
-  private int cleanAshes;
-  private int waterQuality;
-  private int rebuildFacilities;
-  private int relocateWildlife;
-  private int rescueWildlife;
-  private int ananguPeople;
-  private int employeeNum;
+  private int cleanAshes = 400;
+  private int waterQuality = 3000;
+  private int rebuildFacilities = 375000;
+  private int relocateWildlife = 4000;
+  private int rescueWildlife = 4000;
+  private int ananguPeople = 12500000;
+  private int employeeNum = 60000;
   
   public moneyLost(int replantTrees, int cleanAshes, int waterQuality, int rebuildFacilities, int relocateWildlife, int rescueWildlife, int ananguPeople, int employeeNum){
     this.replantTrees = replantTrees;
@@ -32,7 +32,7 @@ public class moneyLost
   *@param cleanAshes
   */
   public void setCleanAshes (int cleanAshes){
-    cleanAshes = 400;
+    this.cleanAshes = cleanAshes;
   }
    /**
   *
@@ -40,7 +40,7 @@ public class moneyLost
   *@param waterQuality
   */
   public void setWaterQuality (int waterQuality){
-    waterQuality = 3000;
+    this.waterQuality = waterQuality;
   }
    /**
   *
@@ -48,7 +48,7 @@ public class moneyLost
   *@param rebuildFacilites
   */
   public void setRebuildFacilities (int rebuildFacilities){
-    rebuildFacilities = 375000;
+    this.rebuildFacilities = rebuildFacilities;
   }
    /**
   *
@@ -56,7 +56,7 @@ public class moneyLost
   *@param reclocateWildlife
   */
   public void setRelocateWildlife (int relocateWildlife){
-    relocateWildlife = 4000;
+    this.relocateWildlife = relocateWildlife;
   }
    /**
   *
@@ -64,7 +64,7 @@ public class moneyLost
   *@param rescueWildlife
   */
   public void setRescuWildlife (int rescueWildlife){
-    rescueWildlife = 4000;
+    this.rescueWildlife = rescueWildlife;
   }
    /**
   *
@@ -72,7 +72,7 @@ public class moneyLost
   *@param ananguPeople
   */
   public void setAnanguPeople (int ananguPeople){
-    ananguPeople= 12500000;
+    this.ananguPeople = ananguPeople;
   }
    /**
   *
@@ -80,7 +80,7 @@ public class moneyLost
   *@param employeeNum
   */
   public void setEmployeeNum (int employeeNum ){
-    employeeNum = 60000;
+    this.employeeNum = employeeNum;
   }
    /**
   *
@@ -88,7 +88,7 @@ public class moneyLost
   *@param replantTrees
   *@return 
   */
-  public int getReplantTrees (int replantTrees){
+  public int getReplantTrees (){
     return replantTrees;
   } 
    /**
@@ -96,7 +96,7 @@ public class moneyLost
   * gets the amount of money to clean the ashes
   *@param cleanAshes
   */
-  public int getCleanAshes (int cleanAshes){
+  public int getCleanAshes (){
     return cleanAshes;
   }
    /**
@@ -105,7 +105,7 @@ public class moneyLost
   * @param waterQuality
   *@return
   */
-  public double getWaterQuality (double waterQuality){
+  public double getWaterQuality (){
     return waterQuality;
   } 
    /**
@@ -114,7 +114,7 @@ public class moneyLost
   *@param rebuildFacilites
   *@return
   */
-  public int getRebuildFacilities (int rebuildFacilities){
+  public int getRebuildFacilities (){
     return rebuildFacilities;
   }
    /**
@@ -123,7 +123,7 @@ public class moneyLost
   *@param relocateWildlife
   *@return
   */
-  public int getRelocateWildlife (int relocateWildlife){
+  public int getRelocateWildlife (){
     return relocateWildlife;
   } 
    /**
@@ -132,7 +132,7 @@ public class moneyLost
   *@param rescueWildlife
   *@return
   */
-  public int getRescuWildlife (int rescueWildlife){
+  public int getRescuWildlife (){
     return rescueWildlife;
   }
    /**
@@ -141,7 +141,7 @@ public class moneyLost
   *@param ananguPeople
   *@return
   */
-  public int getAnanguPeople (int ananguPeople){
+  public int getAnanguPeople (){
     return ananguPeople;
   }
    /**
@@ -150,7 +150,7 @@ public class moneyLost
   *@param employeeNum
   *@return
   */
-  public int getEmployeeNum (int employeeNum ){
+  public int getEmployeeNum (){
     return employeeNum;
   } 
    /**
