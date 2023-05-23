@@ -8,6 +8,9 @@ public class spread extends originalData{
     private double strikeProb = 0.2;
     private static int burntNum = 0;
 
+    /**
+     * This is the constructor that constructs the grid of the forest based on the tree density
+     */
     public spread(){
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
@@ -22,20 +25,53 @@ public class spread extends originalData{
         }
     }
 
+    /**
+     * The setTreeDensity method sets the density of the trees
+     * @param density
+     */
     public void setTreeDensity(double density){ treeDensity = density; }
 
+    /**
+     * The setGrowProb method sets the growing probability of the trees on empty grids
+     * @param grow
+     */
     public void setGrowProb(double grow){ growProb = grow; }
 
+    /**
+     * The setStrikeProb method sets the striking probability of forest fires
+     * @param strike
+     */
     public void setStrikeProb(double strike){ strikeProb = strike; }
 
+    /**
+     * The getTreeDensity method returns the density of the trees
+     * @return tree density
+     */
     public double getTreeDensity(){ return treeDensity; }
 
+    /**
+     * The getGrowProb method returns the growing probability of the trees on empty grids
+     * @return growing probability
+     */
     public double getGrowProb(){ return growProb; }
 
+    /**
+     * The getStrikeProb method returns the striking probability of forest fires
+     * @return the striking probability of forest fires
+     */
     public double getStrikeProb(){ return strikeProb; }
 
-    public String[][] getGrid(){ return grid; }
+    /**
+     * The getGrid method returns the grid of the forest
+     * @return the grid of the forest
+     */
+    public String[][] getGrid(){
+        return grid;
+    }
 
+    /**
+     * The displayGrid method prints out the grid of the forest
+     */
     public void displayGrid(){
         for(int i=0; i<grid.length; i++){
             for(int j=0; j<grid[0].length; j++){
@@ -45,6 +81,9 @@ public class spread extends originalData{
         }
     }
 
+    /**
+     * The strike method sets a forest fire randomly on the grid with a set striking probability each turn
+     */
     public void strike(){
         int num = (int)(Math.random()*10)+1;
         if(num<=strikeProb*10){
@@ -56,13 +95,20 @@ public class spread extends originalData{
         }
     }
 
-
+    /**
+     * The strike method sets a forest fire at a spot in the grid
+     * @param x the x-coordinate of the position of forest fire
+     * @param y the y-coordinate of the position of forest fire
+     */
     public void setStrike(int x, int y){
         grid[x][y] = "F";
         System.out.println("\nafter strike: ");
         displayGrid();
     }
 
+    /**
+     * The spreadFire method simulates the spread of the fire for each turn
+     */
     public void spreadFire(){
 
         String[][] after = new String[grid.length][grid[0].length];
@@ -198,11 +244,18 @@ public class spread extends originalData{
         displayGrid();
     }
 
+    /**
+     * The getBurntNum method returns the number of burned trees in total
+     * @return the number of burned trees
+     */
     public int getBurntNum(){
         return burntNum;
     }
 
-
+    /**
+     * The paint method graphs the grid with empty, fire or tree
+     * @param g   the specified Graphics context
+     */
     public void paint(Graphics g){
         g.drawRect(50, 50, side*10,side*10);
         int x = 10;
